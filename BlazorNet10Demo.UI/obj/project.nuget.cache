@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "BeYq5DZNwS4=",
+  "success": false,
+  "projectFilePath": "C:\\MSlearn\\BlazorNet10DemoClean\\BlazorNet10Demo.UI\\BlazorNet10Demo.UI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AKora\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.8\\microsoft.aspnetcore.app.internal.assets.10.0.8.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'C:\\MSlearn\\BlazorNet10DemoClean\\BlazorNet10Demo.DataAccess\\BlazorNet10Demo.DataAccess.csproj'. Check that the project reference is valid and that the project file exists.",
+      "projectPath": "C:\\MSlearn\\BlazorNet10DemoClean\\BlazorNet10Demo.UI\\BlazorNet10Demo.UI.csproj",
+      "filePath": "C:\\MSlearn\\BlazorNet10DemoClean\\BlazorNet10Demo.UI\\BlazorNet10Demo.UI.csproj",
+      "libraryId": "C:\\MSlearn\\BlazorNet10DemoClean\\BlazorNet10Demo.DataAccess\\BlazorNet10Demo.DataAccess.csproj",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}
