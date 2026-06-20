@@ -1,0 +1,28 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build output
+bin/
+obj/
+out/
+
+# Logs
+*.log
+
+# NuGet
+*.nupkg
+packages/
+
+# EF Core
+Migrations/
+
+# SQLite database files
+*.db
+*.db-shm
+*.db-wal
+
+# Publish output
+publish/
+
