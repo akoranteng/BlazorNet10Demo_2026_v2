@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="BlazorNet10Demo.DataAccess/BlazorNet10Demo.DataAccess.csproj" />
+  <Project Path="BlazorNet10Demo.Domain/BlazorNet10Demo.Domain.csproj" />
+  <Project Path="BlazorNet10Demo.UI/BlazorNet10Demo.UI.csproj" />
+</Solution>

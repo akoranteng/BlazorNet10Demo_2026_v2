@@ -7,8 +7,10 @@
     <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BlazorNet10Demo.DataAccess\BlazorNet10Demo.DataAccess.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\BlazorNet10Demo.DataAccess\BlazorNet10Demo.DataAccess.csproj" />
+		<ProjectReference Include="..\BlazorNet10Demo.Domain\BlazorNet10Demo.Domain.csproj" />
+	</ItemGroup>
+
 
 </Project>

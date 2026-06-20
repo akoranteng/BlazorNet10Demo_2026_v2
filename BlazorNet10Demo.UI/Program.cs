@@ -1,10 +1,22 @@
 using BlazorNet10Demo.UI.Components;
 
+using BlazorNet10Demo.DataAccess.Context;
+using BlazorNet10Demo.DataAccess.Interfaces;
+using BlazorNet10Demo.DataAccess.Repositories;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<ITaskItemRepository, TaskItemRepository>();
+
+
 
 var app = builder.Build();
 
