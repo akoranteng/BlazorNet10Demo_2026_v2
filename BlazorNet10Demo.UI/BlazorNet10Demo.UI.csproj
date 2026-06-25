@@ -7,9 +7,16 @@
     <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid" Version="10.0.9" />
+  </ItemGroup>
+
 	<ItemGroup>
 		<ProjectReference Include="..\BlazorNet10Demo.DataAccess\BlazorNet10Demo.DataAccess.csproj" />
-		<ProjectReference Include="..\BlazorNet10Demo.Domain\BlazorNet10Demo.Domain.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="wwwroot\images\" />
 	</ItemGroup>
 
 
