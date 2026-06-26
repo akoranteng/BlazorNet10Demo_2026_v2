@@ -1,8 +1,8 @@
-using BlazorNet10Demo.UI.Components;
-
 using BlazorNet10Demo.DataAccess.Context;
 using BlazorNet10Demo.DataAccess.Interfaces;
 using BlazorNet10Demo.DataAccess.Repositories;
+using BlazorNet10Demo.DataAccess.Services;
+using BlazorNet10Demo.UI.Components;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +15,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<ITaskItemRepository, TaskItemRepository>();
+//builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddSingleton<IProductService, ProductService>();
+
+
 
 
 

@@ -1,0 +1,49 @@
+﻿@page "/products"
+@using BlazorNet10Demo.Domain.Models
+@using BlazorNet10Demo.DataAccess.Services
+@using BlazorNet10Demo.DataAccess.Interfaces
+@inject IProductService ProductService
+
+<h3 class="mb-4">Products</h3>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    @foreach (var p in products)
+    {
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="@p.ImageUrl" class="card-img-top" />
+
+                <div class="card-body">
+                    <h5 class="card-title fw-semibold">@p.Name</h5>
+                    <p class="card-text text-muted">@p.Description</p>
+
+                    <h6 class="fw-bold text-primary mb-3">
+                        $@p.Price
+                    </h6>
+
+                    <a class="btn btn-primary btn-sm" href="@($"/products/details/{p.Id}")">
+                        Details
+                    </a>
+                                        
+                    <a class="btn btn-warning btn-sm ms-2" href="@($"/products/edit/{p.Id}")">
+                        Edit
+                    </a>
+
+
+                    <a class="btn btn-danger btn-sm ms-2">
+                        Delete
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    private List<Product> products = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        products = await ProductService.GetAllAsync();
+    }
+}

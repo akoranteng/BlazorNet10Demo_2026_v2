@@ -1,0 +1,46 @@
+﻿@page "/products/details/{id:int}"
+@using BlazorNet10Demo.Domain.Models
+@using BlazorNet10Demo.DataAccess.Interfaces
+@inject IProductService ProductService
+
+
+
+
+
+
+<h3 class="mb-4">Product Details</h3>
+
+@if (product is null)
+{
+    <p>Product not found.</p>
+}
+else
+{
+    <div class="card" style="width: 22rem;">
+        <img src="@product.ImageUrl" class="card-img-top" />
+
+        <div class="card-body">
+            <h5 class="card-title fw-semibold">@product.Name</h5>
+            <p class="card-text text-muted">@product.Description</p>
+
+            <h6 class="fw-bold text-primary mb-3">
+                $@product.Price
+            </h6>
+
+            <p><strong>Quantity:</strong> @product.Quantity</p>
+
+            <a class="btn btn-secondary mt-3" href="/products">Back to Products</a>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public int id { get; set; }
+
+    private Product? product;
+
+    protected override async Task OnInitializedAsync()
+    {
+        product = await ProductService.GetByIdAsync(id);
+    }
+}
